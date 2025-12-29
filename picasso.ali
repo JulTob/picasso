@@ -1,0 +1,156 @@
+V "GNAT Lib v8"
+P ZX
+
+RN
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U picasso%b		picasso.adb		cad5edb4 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.directories%s	a-direct.adb		a-direct.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
+Z system.concat_7%s	s-conca7.adb		s-conca7.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U picasso%s		picasso.ads		de733773 EE NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20200304083000 76789da1 ada%s
+D a-calend.ads		20200304083000 2d5f01d4 ada.calendar%s
+D a-charac.ads		20200304083000 2d3ec45b ada.characters%s
+D a-chlat1.ads		20200304083000 66457d31 ada.characters.latin_1%s
+D a-direct.ads		20200304083000 9d42e46d ada.directories%s
+D a-except.ads		20200304083000 291912d5 ada.exceptions%s
+D a-finali.ads		20200304083000 bf4f806b ada.finalization%s
+D a-inteio.ads		20200304083000 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200304083000 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200304083000 119b8fb3 ada.streams%s
+D a-string.ads		20200304083000 90ac6797 ada.strings%s
+D a-strmap.ads		20200304083000 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20200304083000 ecdfa332 ada.strings.unbounded%s
+D a-tags.ads		20200304083000 491b781d ada.tags%s
+D a-textio.ads		20200304083000 881db35a ada.text_io%s
+D a-tiinio.ads		20200304083000 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20200304083000 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200304083000 5ab55268 interfaces%s
+D i-cstrea.ads		20200304083000 e53d8b8e interfaces.c_streams%s
+D picasso.ads		20220203135200 566e8429 picasso%s
+D picasso.adb		20220203135223 7fafb70e picasso%b
+D system.ads		20200304083000 4635ec04 system%s
+D s-atocou.ads		20200304083000 b45c2d8d system.atomic_counters%s
+D s-conca2.ads		20200304083000 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20200304083000 0b705ca5 system.concat_3%s
+D s-conca7.ads		20200304083000 fcc75b1f system.concat_7%s
+D s-crtl.ads		20200304083000 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200304083000 54135002 system.exception_table%s
+D s-ficobl.ads		20200304083000 078245e4 system.file_control_block%s
+D s-finmas.ads		20200304083000 7811a767 system.finalization_masters%s
+D s-finroo.ads		20200304083000 4ff27390 system.finalization_root%s
+D s-imgint.ads		20200304083000 02dbe0c2 system.img_int%s
+D s-parame.ads		20200304083000 f896c45c system.parameters%s
+D s-secsta.ads		20200304083000 283dec34 system.secondary_stack%s
+D s-soflin.ads		20200304083000 a7318a92 system.soft_links%s
+D s-stache.ads		20200304083000 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200304083000 09bd3940 system.standard_library%s
+D s-stoele.ads		20200304083000 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20200304083000 b16154c2 system.storage_pools%s
+D s-stposu.ads		20200304083000 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20200304083000 aedef97e system.stream_attributes%s
+D s-traent.ads		20200304083000 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200304083000 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20200304083000 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 20e8 20|1r6 1r23 21|1r6 2r6 3r6 4r5 14r13 15r13
+X 5 a-direct.ads
+76K13*Directories 487e20 21|1w10 15r17
+295V13*Exists{boolean} 21|17s15
+X 8 a-inteio.ads
+18K13*Integer_Text_IO[16|46] 21|3w10 4r9
+X 15 a-textio.ads
+49K13*Text_IO 471e16 20|1w10 1r27 21|2w10 14r17
+52P9*File_Type 20|41r21 46r21 51r21 62r20 74r21 21|10r23 42r21 60r22 99r22
+. 143r25
+53n32*Out_File{53E9} 21|21r28
+86U14*Create 21|21s12
+98U14*Close 21|46s7
+165U14*New_Line 21|34s12 93s8 137s9 157s13
+207U14*Put 21|29s21 33s20 73s14 77s13 81s14 85s13 113s15 117s15 121s15 129s15
+241U14*Put 21|26s12 30s12 68s8 70s8 74s8 78s9 82s8 86s8 89s11 91s8 109s9
+. 110s9 114s9 118s9 122s9 124s9 126s9 132s11 135s9 149s13 151s17 154s17 156s13
+259U14*Put_Line 21|22s12 24s12 35s12 45s7
+263U14*Put_Line 21|18s15
+X 16 a-tiinio.ads
+60U14*Put 21|28s21[8|18] 32s20[8|18] 72s14[8|18] 76s13[8|18] 80s14[8|18]
+. 84s13[8|18] 112s15[8|18] 116s15[8|18] 120s15[8|18] 128s15[8|18]
+X 20 picasso.ads
+3K9*Picasso 89l5 89e12 21|5b14 180l5 180t12
+7I11*RGB_Dimension{natural} 81r18 82r18 83r18 21|162r20 163r20 164r20
+12a3*RED{string} 54r32 21|63r32
+13a3*GREEN{string}
+14a3*YELLOW{string}
+15a3*BLUE{string}
+16a3*PINK{string}
+17a3*BLACK{string}
+18a3*GOLD{string}
+19a3*LIME{string}
+20a3*NAVY{string}
+21a3*aliceblue{string}
+22a3*antiquewhite{string}
+23a3*aqua{string}
+24a3*aquamarine{string}
+25a3*azure{string}
+26a3*beige{string}
+31a3*Circle_Shape{string} 75r32 21|144r36
+32a3*Rectangle_Shape{string}
+33a3*Ellipse_Shape{string}
+34a3*Line_Shape{string}
+35a3*Polyline_Shape{string}
+36a3*Polygon_Shape{string}
+37a3*Path_Shape{string}
+39U13*NewCanvas 40>5 41=5 42>5 43>5 21|8b15 38l15 38t24
+40a5 Name{string} 21|9b7 17r23 21r38
+41p5 Canvas{15|52P9} 21|10b7 21m20 22r22 24r22 26r17 28r25 29r25 30r17 32r24
+. 33r24 34r21 35r22
+42i5 width{natural} 21|11b7 28r33
+43i5 length{natural} 21|12b7 32r32
+45U13*CloseCanvas 46=5 21|41b15 47l9 47t20
+46p5 Canvas{15|52P9} 21|42b5 45r16 46m13
+50U13*Rectangle 51=5 52>5 53>5 54>5 55>5 56>5 57>5 21|59b15 95l11 95t20
+51p5 Canvas{15|52P9} 21|60b6 68r13 70r13 72r18 73r18 74r13 76r17 77r17 78r14
+. 80r18 81r18 82r13 84r17 85r17 86r13 89r15 91r13 93r17
+52i5 width{natural} 21|61b6 72r26
+53i5 height{natural} 21|62b6 76r25
+54a5 color{string} 21|63b6 87r33
+55i5 x{natural} 21|64b6 80r26
+56i5 y{natural} 21|65b6 84r25
+57a5 style_String{string} 21|66b6 88r11 89r29
+61U13*Circle 62=5 63>5 64>5 65>5 66>5 67>5 68>5 69>5 21|98b15 138l13 138t19
+62p5 Canvas{15|52P9} 21|99b7 109r14 110r14 112r19 113r19 114r14 116r19 117r19
+. 118r14 120r19 121r19 122r14 124r14 126r14 128r19 129r19 132r15 135r14 137r18
+63i5 coordenate_x{natural} 21|100b7 112r27
+64i5 coordenate_y{natural} 21|101b7 116r27
+65i5 radius{natural} 21|102b7 120r27
+66a5 Color{string} 21|103b7 123r34
+67a5 Stroke_Color{string} 21|104b7 125r36
+68i5 Stroke_Width{natural} 21|105b7 128r27
+69a5 style_String{string} 21|106b7 131r12 132r29
+73U13*Shape 74=5 75>5 76>5 77>5 21|142b15 158l15 158t20
+74p5 Canvas{15|52P9} 21|143b9 149r17 151r21 154r21 156r17 157r22
+75a5 Shape{string} 21|144b9 149r33
+76a5 Characteristics{string} 21|145b9 150r18 151r28
+77a5 style_String{string} 21|146b9 153r18 154r35
+80V12*RGB{string} 81>7 82>7 83>7 21|161b14 177l11 177t14
+81i7 Red{7I11} 21|162b9 170r26
+82i7 Green{7I11} 21|163b9 172r26
+83i7 Blue{7I11} 21|164b9 174r26
+X 21 picasso.adb
+49V14 style{string} 49b14 50>9 56l11 56t16 89s23 132s23 154s29
+50a9 style{string} 55r29
+
