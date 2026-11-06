@@ -3,6 +3,8 @@ with Ada.Strings.Fixed;
 with Ada.Strings.Unbounded;
 with Ada.Text_IO;
 with Ada.Long_Float_Text_IO;
+with Ada.Directories;
+with Ada.IO_Exceptions;
 
 package body Picasso.Plots is
 
@@ -10,7 +12,7 @@ package body Picasso.Plots is
       Buffer : String (1 .. 80);
    begin
       Ada.Long_Float_Text_IO.Put
-        (To => Buffer, Item => Value, Fore => 1, Aft => 3, Exp => 0);
+        (To => Buffer, Item => Value, Aft => 3, Exp => 0);
       return Ada.Strings.Fixed.Trim (Buffer, Ada.Strings.Both);
    end Text;
 
@@ -24,13 +26,13 @@ package body Picasso.Plots is
       use Ada.Strings.Unbounded;
       Escaped : Unbounded_String;
    begin
-      for Character of Source loop
-         case Character is
+      for Symbol of Source loop
+         case Symbol is
             when '&'  => Append (Escaped, "&amp;");
             when '<'  => Append (Escaped, "&lt;");
             when '>'  => Append (Escaped, "&gt;");
             when '"'  => Append (Escaped, "&quot;");
-            when others => Append (Escaped, Character);
+            when others => Append (Escaped, Symbol);
          end case;
       end loop;
       return To_String (Escaped);
@@ -146,6 +148,9 @@ package body Picasso.Plots is
       end if;
 
       --  Picasso's existing canvas handles SVG opening/closing.
+      if Ada.Directories.Exists (Name & ".svg") then
+         raise Ada.IO_Exceptions.Use_Error with "Output SVG already exists";
+      end if;
       Picasso.NewCanvas (Name, Canvas, Width, Height);
       Label (Width / 2, 23, Title, "middle");
       Segment (Left, Top, Left, Bottom);
@@ -179,10 +184,10 @@ package body Picasso.Plots is
 
       procedure Check_Title (Value : String) is
       begin
-         for Character of Value loop
-            if Character = '"'
-              or else Character = Character'Val (10)
-              or else Character = Character'Val (13)
+         for Symbol of Value loop
+            if Symbol = '"'
+              or else Symbol = ASCII.LF
+              or else Symbol = ASCII.CR
             then
                raise Constraint_Error with "Mermaid label contains a quote or newline";
             end if;
