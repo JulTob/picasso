@@ -28,7 +28,7 @@ package body Picasso is
                     Put(Canvas, width, 0);
                     Put(Canvas, '"' );
            Put( Canvas,
-                   "    length=" & '"' );
+                   "    height=" & '"' );
                    Put(Canvas, length, 0);
                    Put(Canvas, '"' );
            New_Line(Canvas);
