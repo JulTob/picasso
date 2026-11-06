@@ -51,8 +51,10 @@ package body Picasso.Plots is
       for Index in Data'Range loop
          if Data (Index).X /= Data (Index).X
            or else Data (Index).Y /= Data (Index).Y
+           or else abs Data (Index).X > Long_Float'Last
+           or else abs Data (Index).Y > Long_Float'Last
          then
-            raise Constraint_Error with "NaN is not a valid observation";
+            raise Constraint_Error with "Nonfinite observation";
          end if;
          if Index > Data'First
            and then Data (Index).X <= Data (Index - 1).X
